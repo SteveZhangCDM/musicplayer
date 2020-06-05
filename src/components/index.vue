@@ -3,19 +3,28 @@
     <!-- nav in the left   -->
     <div class="nav">
       <ul>
-        <li>discovery more</li>
-        <li>recommend songs</li>
-        <li>new songs</li>
-        <li>new mv</li>
+        <li><router-link to="/discovery">Discovery More</router-link></li>
+        <li><router-link to="/recommendmusic">Recommend Music</router-link></li>
+        <li><router-link to="/newsongs">New Song</router-link></li>
+        <li><router-link to="/newmvs">New MV</router-link></li>
       </ul>
     </div>
     <!-- the container at right -->
-    <div class="main"></div>
+    <div class="main">
+      <!-- router exit -->
+      <!-- <discovery></discovery> -->
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+// import discovery from './01discovery';
+export default {
+  // components: {
+  //   discovery,
+  // },
+};
 </script>
 
 <style>
@@ -26,12 +35,16 @@ export default {};
 
 .index .nav {
   width: 250px;
-  background-color: #8da9c4;
+  background-color: #c5c3c6;
 }
 
 .index .nav li {
   text-align: center;
   margin: 10px;
+}
+
+.index .nav a {
+  text-decoration: none;
 }
 
 .main {
