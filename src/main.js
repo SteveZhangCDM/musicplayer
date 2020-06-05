@@ -13,6 +13,7 @@ import discovery from './components/01discovery.vue';
 import recommendmusic from './components/02recommendmusic.vue';
 import newsongs from './components/03newsongs.vue';
 import newmvs from './components/04newmvs.vue';
+import result from './components/result.vue';
 
 let router = new VueRouter({
   routes: [
@@ -45,6 +46,12 @@ let router = new VueRouter({
       path: '/newmvs',
       //component
       component: newmvs,
+    },
+    {
+      //address
+      path: '/result',
+      //component
+      component: result,
     },
   ],
 });

@@ -1,16 +1,26 @@
 <template>
   <div class="top">
-    <el-button type="info" icon="el-icon-search" id="top_searchBtn"></el-button>
-    <input type="text" />
+    <el-button type="info" icon="el-icon-search"></el-button>
+    <input type="text" v-model="inputValue" @keyup.enter="toSearch" />
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      inputValue: '',
+    };
   },
-  methods: {},
+  methods: {
+    toSearch() {
+      if (this.inputValue === '') {
+        alert('please type the song you want to search');
+      } else {
+        this.$router.push(`/result?q=${this.inputValue}`);
+      }
+    },
+  },
 };
 </script>
 
