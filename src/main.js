@@ -6,8 +6,6 @@ Vue.config.productionTip = false;
 // import router
 import VueRouter from 'vue-router';
 
-//use
-
 Vue.use(VueRouter);
 import discovery from './components/01discovery.vue';
 import recommendmusic from './components/02recommendmusic.vue';
@@ -18,33 +16,23 @@ import result from './components/result.vue';
 let router = new VueRouter({
   routes: [
     {
-      //address
       path: '/discovery',
-      //component
       component: discovery,
     },
     {
-      //address
       path: '/',
-      //component
       component: discovery,
     },
     {
-      //address
       path: '/recommendmusic',
-      //component
       component: recommendmusic,
     },
     {
-      //address
       path: '/newsongs',
-      //component
       component: newsongs,
     },
     {
-      //address
       path: '/newmvs',
-      //component
       component: newmvs,
     },
     {

@@ -3,18 +3,36 @@
     <!-- nav in the left   -->
     <div class="nav">
       <ul>
-        <li><router-link to="/discovery">Discovery More</router-link></li>
-        <li><router-link to="/recommendmusic">Recommend Music</router-link></li>
-        <li><router-link to="/newsongs">New Song</router-link></li>
-        <li><router-link to="/newmvs">New MV</router-link></li>
+        <li>
+          <router-link to="/discovery">
+            <span class="iconfont icon-find-music"></span>Discovery More
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/recommendmusic">
+            <span class="iconfont icon-music-list"></span>Recommend Music
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/newsongs">
+            <span class="iconfont icon-music"></span>New Song
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/newmvs">
+            <span class="iconfont icon-mv"></span>New MV
+          </router-link>
+        </li>
       </ul>
     </div>
     <!-- the container at right -->
     <div class="main">
       <!-- router exit -->
-      <!-- <discovery></discovery> -->
       <router-view></router-view>
     </div>
+    <!-- <div class="player">
+      <audio src="musicUrl" controls></audio>
+    </div>-->
   </div>
 </template>
 
