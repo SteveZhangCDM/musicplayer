@@ -111,6 +111,9 @@ export default {
         params: {
           id,
         },
+      }).then((res) => {
+        let url = res.data.data[0].url;
+        this.$parent.musicUrl = url;
       });
     },
   },
