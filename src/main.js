@@ -1,7 +1,12 @@
 import Vue from 'vue';
 import App from './App.vue';
 
-Vue.config.productionTip = false;
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
+
+import './assets/index.css';
 
 // import router
 import VueRouter from 'vue-router';
@@ -44,10 +49,7 @@ let router = new VueRouter({
   ],
 });
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-
-Vue.use(ElementUI);
+Vue.config.productionTip = false;
 
 new Vue({
   render: (h) => h(App),

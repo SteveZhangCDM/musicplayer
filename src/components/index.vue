@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="index-container">
     <!-- nav in the left   -->
     <div class="nav">
       <ul>
@@ -30,9 +30,9 @@
       <!-- router exit -->
       <router-view></router-view>
     </div>
-    <!-- <div class="player">
-      <audio src="musicUrl" controls></audio>
-    </div>-->
+    <div class="player">
+      <audio src="musicUrl" controls autoplay></audio>
+    </div>
   </div>
 </template>
 
@@ -46,27 +46,4 @@ export default {
 </script>
 
 <style>
-.index {
-  display: flex;
-  height: 850px;
-}
-
-.index .nav {
-  width: 250px;
-  background-color: #c5c3c6;
-}
-
-.index .nav li {
-  text-align: center;
-  margin: 10px;
-}
-
-.index .nav a {
-  text-decoration: none;
-}
-
-.main {
-  background-color: pink;
-  flex: 1;
-}
 </style>

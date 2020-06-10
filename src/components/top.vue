@@ -1,7 +1,16 @@
 <template>
   <div class="top">
-    <el-button type="info" icon="el-icon-search"></el-button>
-    <input type="text" v-model="inputValue" @keyup.enter="toSearch" />
+    <input
+      type="text"
+      autocomplete="off"
+      placeholder="Search"
+      class="el-input__inner"
+      v-model="inputValue"
+      @keyup.enter="toResult"
+    />
+    <span class="el-input__prefix">
+      <i class="el-input__icon el-icon-search"></i>
+    </span>
   </div>
 </template>
 
@@ -9,18 +18,18 @@
 export default {
   data() {
     return {
-      inputValue: '',
+      inputValue: ""
     };
   },
   methods: {
     toSearch() {
-      if (this.inputValue === '') {
-        alert('please type the song you want to search');
+      if (this.inputValue === "") {
+        alert("please type the song you want to search");
       } else {
         this.$router.push(`/result?q=${this.inputValue}`);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -33,20 +42,14 @@ export default {
 .top {
   width: 1920px;
   height: 45px;
-  background: #eef4ed;
-}
-
-.top button {
-  float: right;
-  margin: 3px 3px 0 0;
-  border-radius: 0;
+  background: #eaf4f4;
 }
 
 .top input {
   float: right;
   height: 37px;
   width: 300px;
-  margin: 3px 0 0 0;
+  margin: 4px 30px 0 0;
   border-color: #a6a9ad;
 }
 </style>
