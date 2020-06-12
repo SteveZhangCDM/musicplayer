@@ -31,7 +31,7 @@
       <router-view></router-view>
     </div>
     <div class="player">
-      <audio src="musicUrl" controls autoplay></audio>
+      <audio :src="musicUrl" controls autoplay></audio>
     </div>
   </div>
 </template>
@@ -39,9 +39,13 @@
 <script>
 // import discovery from './01discovery';
 export default {
-  // components: {
-  //   discovery,
-  // },
+  name: "index",
+  data() {
+    return {
+      musicUrl:
+        "http://m7.music.126.net/20200303182550/8aa5971b1630d1527a922ccd2b97f392/ymusic/035d/0109/520e/478f86cc9f6c6539f7c8ed3e06c1bf8e.mp3"
+    };
+  }
 };
 </script>
 

@@ -1,7 +1,5 @@
 <template>
-  <div class="newmvs">
-    <img src="../assets/newmvs.png" alt="" />
-  </div>
+  <div class="newmvs"></div>
 </template>
 
 <script>

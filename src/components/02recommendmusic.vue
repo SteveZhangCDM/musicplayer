@@ -1,7 +1,5 @@
 <template>
-  <div class="recommendmusic">
-    <img src="../assets/recommend.png" alt="" />
-  </div>
+  <div class="recommendmusic"></div>
 </template>
 
 <script>

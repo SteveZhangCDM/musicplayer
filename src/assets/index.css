@@ -1250,6 +1250,7 @@ ol {
 .index-container .nav {
   background-color: #cce3de;
   width: 300px;
+  height: auto;
 }
 
 .index-container .nav li {

@@ -1,7 +1,5 @@
 <template>
-  <div class="newsongs">
-    <img src="../assets/newsongs.png" alt="" />
-  </div>
+  <div class="newsongs"></div>
 </template>
 
 <script>

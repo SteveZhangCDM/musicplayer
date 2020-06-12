@@ -8,25 +8,23 @@
       v-model="inputValue"
       @keyup.enter="toResult"
     />
-    <span class="el-input__prefix">
-      <i class="el-input__icon el-icon-search"></i>
-    </span>
   </div>
 </template>
 
 <script>
 export default {
+  name: "top",
   data() {
     return {
       inputValue: ""
     };
   },
   methods: {
-    toSearch() {
+    toResult() {
       if (this.inputValue === "") {
-        alert("please type the song you want to search");
+        this.$message.warning("please input the song you want to search");
       } else {
-        this.$router.push(`/result?q=${this.inputValue}`);
+        this.$router.push("/result?q=" + this.inputValue);
       }
     }
   }
